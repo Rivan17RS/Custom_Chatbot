@@ -21,7 +21,7 @@ def CustomChatbot(user_message):
     messages.append({"role": "assistant", "content": assistant_message})
 
     chat_history = format_chat_history(messages)
-    return assistant_message, chat_history
+    return assistant_message, chat_history, ""
 
 def format_chat_history(msgs):
     history = []
@@ -71,7 +71,7 @@ with gr.Blocks(css=custom_css) as demo:
 
     send_btn.click(fn=CustomChatbot,
                    inputs=[user_input],
-                   outputs=[response_output, chat_history])
+                   outputs=[response_output, chat_history, user_input])
 
     reset_btn.click(fn=reset_chat,
                     inputs=[],
