@@ -61,14 +61,15 @@ If you want to run or modify this chatbot locally:
    pip install -r requirements.txt
 
 ## Set your OpenAI API key as an environment variable:
-
+```bash
 export OPENAI_API_KEY="your_api_key_here" # Linux/macOS
 setx OPENAI_API_KEY "your_api_key_here"   # Windows (PowerShell)
+```
 
 ## Run the app
-
+```bash
 python app.py
-
+```
 ## License
 MIT License © 2025 Rivan
 
